@@ -1,20 +1,20 @@
 {
-  "name": "language-dtml",
-  "version": "0.0.1",
+  "name": "atom-language-dtml",
+  "version": "0.0.0",
   "author": "Matthias Balota",
   "description": "DTML language support in Atom for Atikon.",
   "engines": {
     "atom": "*",
     "node": "*"
   },
-  "homepage": "http://atom.github.io/language-dtml",
+  "homepage": "http://atom.github.io/atom-language-dtml",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MBALOTA/language-dtml.git"
+    "url": "https://github.com/Atikon/atom-language-dtml.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MBALOTA/language-dtml/issues"
+    "url": "https://github.com/Atikon/atom-language-dtml/issues"
   },
   "dependencies": {
     "atom-grammar-test": "^0.6.3"
