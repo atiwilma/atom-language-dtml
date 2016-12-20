@@ -776,32 +776,40 @@
     'prefix': 'htmlq'
     'body': 'html_quote'
   'visible()':
-    'prefix': 'vis'
+    'prefix': 'visible'
     'body': 'visible()$1'
     'leftLabel': 'Filter'
   'children()':
-    'prefix': 'childs'
+    'prefix': 'children'
     'body': 'children()$1'
   'count()':
     'prefix': 'count'
     'body': 'count()$1'
+  'getLangStr(\'\')':
+    'prefix': 'getLangStr'
+    'body': 'getLangStr(\'${1:property}\')$2'
+    'description': 'Gibt zurück die Übersetzung des Schlüssels aus der momentanen oder übergebenen Sprache.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/getlangstr_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
   'get_property(\'\')':
-    'prefix': 'getprop'
+    'prefix': 'get_property'
     'body': 'get_property(\'${1:property}\')$2'
+    'description': 'Gibt zurück die Property eines Objektes.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/get_property_/index_ger.html'
     'leftLabel': 'Seitenelement >'
 #insert after .DOT
-  '.get_property(\'\')':
-    'prefix': '.getprop'
-    'body': '.get_property(\'${1:property}\')$2'
-  '.children()':
-    'prefix': '.childs'
-    'body': '.children()$1'
-  '.count()':
-    'prefix': '.count'
-    'body': '.count()$1'
-  '.visible()':
-    'prefix': '.vis'
-    'body': '.visible()$1'
+  # '.get_property(\'\')':
+  #   'prefix': '.getprop'
+  #   'body': '.get_property(\'${1:property}\')$2'
+  # '.children()':
+  #   'prefix': '.childs'
+  #   'body': '.children()$1'
+  # '.count()':
+  #   'prefix': '.count'
+  #   'body': '.count()$1'
+  # '.visible()':
+  #   'prefix': '.vis'
+  #   'body': '.visible()$1'
 # ---- INLINE DTML START -------------------------------------------------------
 # ---- MUSS OBEN NOCHMALS (name, prefix) ANGEGEBEN WERDEN!!! -------------------
 # ------------------------------------------------------------------------------
