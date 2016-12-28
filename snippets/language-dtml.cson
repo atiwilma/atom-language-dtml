@@ -772,6 +772,144 @@
     'leftLabel': 'Seite >'
 # SEITENELEMENT OBJEKT
 # ------------------------------------------------------------------------------
+  'absolute_url()':
+    'prefix': 'absolute_url'
+    'body': 'absolute_url()$1'
+    'description': 'Nicht-deklarative URL zu einem Objekt.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/absolute_url_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'create_child({})':
+    'prefix': 'create_child'
+    'body': 'create_child($1)$2'
+    'description': 'Legt ein Kind-Element oder einen Eintrag in ein Objekt-Attribut an. Das neu erstellte Kind wird auch von der Methode zurückgegeben.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/create_child_options_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'delete()':
+    'prefix': 'delete'
+    'body': 'delete()$1'
+    'description': 'Löscht ein Element.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/delete_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'getHome()':
+    'prefix': 'getHome'
+    'body': 'getHome()$1'
+    'description': 'URL zum Root des Projektes.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/gethome_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'getLangStr(\'\')':
+    'prefix': 'getLangStr'
+    'body': 'getLangStr(\'${1:property}\')$2'
+    'description': 'Gibt zurück die Übersetzung des Schlüssels aus der momentanen oder übergebenen Sprache.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/getlangstr_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'getLanguageLabel( Sprache )':
+    'prefix': 'getLanguageLabel'
+    'body': 'getLanguageLabel(${1:Sprache})$2'
+    'description': 'Name der übergebenen Sprache.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/getlanguagelabel_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'getLanguages()':
+    'prefix': 'getLanguages'
+    'body': 'getLanguages()$1'
+    'description': 'Array mit allen verfügbaren Sprachen.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/getlanguages_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'getPrimaryLanguage()':
+    'prefix': 'getPrimaryLanguage'
+    'body': 'getPrimaryLanguage()$1'
+    'description': 'Gibt die primäre Sprache zurück, z.B.: \'ger\'.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/getprimarylanguage_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'get_decl_id()':
+    'prefix': 'get_decl_id'
+    'body': 'get_decl_id()$1'
+    'description': 'Die ID eines Objektes, die in der URL Konstruktion verwendet wird, z.B: "%C3%BCber_uns".'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/get_decl_id_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'get_decl_uri()':
+    'prefix': 'get_decl_uri'
+    'body': 'get_decl_uri()$1'
+    'description': 'Die deklarative URL zu einem Objekt, z.B.: "http://intranet.atikon.at/content/inhalte/steuernews".'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/get_decl_uri_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'get_description(size)':
+    'prefix': 'get_description'
+    'body': 'get_description(${1:size_in_number})'
+    'description': 'Liest den Inhalt eines Textabschnitts aus und strippt sämtliche HTML Auszeichnungen.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/get_description_size_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'get_document_element()':
+    'prefix': 'get_document_element'
+    'body': 'get_document_element()$1'
+    'description': 'Das Wurzelobjekt vom Inhaltsbaum (content).'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/get_document_element_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'get_files()':
+    'prefix': 'get_files'
+    'body': 'get_files()$1'
+    'description': 'Ein Array mit allen Dateien oder Bildern eines Objektes (von Datei oder Bild Attribute).'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/get_files_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'get_href_to_index_html()':
+    'prefix': 'get_href_to_index_html'
+    'body': 'get_href_to_index_html()$1'
+    'description': 'Die komplette URL zum Objekt (zeigend auf die erste vorhandene Seite).'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/get_href_to_index_html_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'get_href_to_index_pdf()':
+    'prefix': 'get_href_to_index_pdf'
+    'body': 'get_href_to_index_pdf()$1'
+    'description': 'Die komplette URL zur PDF Ausgabe des Objektes.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/get_href_to_index_pdf_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'get_level()':
+    'prefix': 'get_level'
+    'body': 'get_level()$1'
+    'description': 'Der Level des Knotens.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/get_level_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'get_link_url(url)':
+    'prefix': 'get_link_url'
+    'body': 'get_link_url(${1:url})$2'
+    'description': 'URL zu einem Objekt durch die übergebene ZMS URL.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/get_link_url_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'get_next_sibling(\'id\')':
+    'prefix': 'get_next_sibling'
+    'body': 'get_next_sibling(\'${1:id}\')'
+    'description': 'Liefert den unmittelbar nachfolgenden Knoten im Strukturbaum.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/get_next_sibling_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'get_obj_by_path(url)':
+    'prefix': 'get_obj_by_path'
+    'body': 'get_obj_by_path(${1:url})$2'
+    'description': 'Objekt der übergebenen ZMS URL.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/get_obj_by_path_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'get_obj_children(\'id\')':
+    'prefix': 'get_obj_children'
+    'body': 'get_obj_children(\'${1:id}\')'
+    'description': 'Alle Unterelemente eines Attributes.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/get_obj_children_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'get_page()':
+    'prefix': 'get_page'
+    'body': 'get_page()$1'
+    'description': 'Gibt die Seite zurück, welches das Objekt beinhalteet, oder das Objekt selbst, falls es eine Seite ist.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/get_page_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'get_page_with_elements()':
+    'prefix': 'get_page_with_elements'
+    'body': 'get_page_with_elements()$1'
+    'description': 'Die erste Unterseite, die sichtbare Elemente beinhaltet.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/get_page_with_elements_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'get_property(\'\')':
+    'prefix': 'get_property'
+    'body': 'get_property(\'${1:property}\')$2'
+    'description': 'Gibt zurück die Property eines Objektes.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/get_property_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
   'html_quote':
     'prefix': 'htmlq'
     'body': 'html_quote'
@@ -785,18 +923,6 @@
   'count()':
     'prefix': 'count'
     'body': 'count()$1'
-  'getLangStr(\'\')':
-    'prefix': 'getLangStr'
-    'body': 'getLangStr(\'${1:property}\')$2'
-    'description': 'Gibt zurück die Übersetzung des Schlüssels aus der momentanen oder übergebenen Sprache.'
-    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/getlangstr_/index_ger.html'
-    'leftLabel': 'Seitenelement >'
-  'get_property(\'\')':
-    'prefix': 'get_property'
-    'body': 'get_property(\'${1:property}\')$2'
-    'description': 'Gibt zurück die Property eines Objektes.'
-    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/get_property_/index_ger.html'
-    'leftLabel': 'Seitenelement >'
 #insert after .DOT
   # '.get_property(\'\')':
   #   'prefix': '.getprop'
