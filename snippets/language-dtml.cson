@@ -780,7 +780,14 @@
     'leftLabel': 'Seitenelement >'
   'create_child({})':
     'prefix': 'create_child'
-    'body': 'create_child($1)$2'
+    'body': """
+        create_child({
+            'meta_type' : '${1:zms_textarea}',
+            'data'      : {
+                $3
+            }
+        })
+    """
     'description': 'Legt ein Kind-Element oder einen Eintrag in ein Objekt-Attribut an. Das neu erstellte Kind wird auch von der Methode zurückgegeben.'
     'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/create_child_options_/index_ger.html'
     'leftLabel': 'Seitenelement >'
@@ -910,6 +917,56 @@
     'description': 'Gibt zurück die Property eines Objektes.'
     'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/get_property_/index_ger.html'
     'leftLabel': 'Seitenelement >'
+  'get_text()':
+    'prefix': 'get_text'
+    'body': 'get_text()$1'
+    'description': 'Gibt den Text eines Textabschnittes zurück.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/get_text_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'is_active()':
+    'prefix': 'is_active'
+    'body': 'is_active()$1'
+    'description': 'Ist Seitenelement aktiv?'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/is_active_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'is_translated( Sprache )':
+    'prefix': 'is_translated'
+    'body': 'is_translated($1)$2'
+    'description': 'True oder False, je nachdem, ob das Objekt in der momentanen oder übergebenen Sprache verfügbar ist.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/is_translated_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'is_visible()':
+    'prefix': 'is_visible'
+    'body': 'is_visible()$1'
+    'description': 'Ist Seitenelement sichtbar?'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/is_visible_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'scaled()':
+    'prefix': 'scaled'
+    'body': 'scaled(${1:max_width}, ${2:max_height}, ${3:quality})'
+    'description': 'Thumbnail des Bild- oder PDF-Attributes.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/is_translated_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'set_property()':
+    'prefix': 'set_property'
+    'body': 'set_property(\'${1:attribute}\', \'${2:value}\'${3: ,\'${4:language}\'})$5'
+    'description': 'Achtung: Nach dem set_property() MUSS noch ein update() ausgeführt werden, damit die Änderungen in der Datenbank gespeichert werden. Dies kann NICHT gechained werden.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/set_property_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'thumbnail( Parameter )':
+    'prefix': 'thumbnail'
+    'body': """
+        thumbnail({
+            'size'      : $1,
+            'attribute' : '$2',
+            'max_width' : $3,
+            'max_height': $4,
+            'quality'   : $5
+        })
+    """
+    'description': 'Thumbnail des übergebenen Bildes.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/thumbnail_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
   'html_quote':
     'prefix': 'htmlq'
     'body': 'html_quote'
@@ -1003,7 +1060,7 @@
 # ---------------------------------------------------------------- DTML END ----
 # ------------------------------------------------------------------------------
 
-'.text.dtml .punctuation.tag.begin, .text.dtml':
+'.text.dtml .punctuation.tag.begin, .text.dtml, .source.js.embedded.dtml':
 # ---- DTML START --------------------------------------------------------------
 # ---- IM NORMALEN TEXT --------------------------------------------------------
 # ------------------------------------------------------------------------------
@@ -1067,6 +1124,30 @@
     'body': '<dtml-with ${1:object}>\n\t$2\n</dtml-with>'
     'description': 'Mit <dtml-with> wird der Kontext vom Code innerhalb auf das übergebene Objekt gesetzt.'
     'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_with'
+  'cake':
+    'prefix': 'nomnomnom'
+    'body': """
+        █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
+        █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
+        █░░░░░░░░░░░░░░▄░░░░░░░░░░░░░░░░░░░░░█
+        █░░░░░░░░░░░░░░░█░░░░░░░░░░░░░░░░░░░░█
+        █░░░░░░░░░░░▄▄░▄▀░░░░░░░░░░░░░░░░░░░░█
+        █░░░░░░░░▄██████▄░░░░░▄▄▄▄▄▄███▀█░░░░█
+        █░░░░░░▄█░███████░██▀▀▀░▄▄█▀█▄███░░░░█
+        █░░░░█▀▀▀░█████▀▀▄█▀▄▄▀▀▄▄███████░░░░█
+        █░░░░█▀▄▄▄▄███░▄▄█▀▀▄▄███████▀▀▄▄░░░░█
+        █░░░░█░░░░▀▀▀▀▀▀▄▄███████▀▀▄▄████░░░░█
+        █░░░░█░░░░░░░░░█████▀▀▀▄▄███████▀░░░░█
+        █░░░░█░░░░░░░░░█▀▀░▄▄███████▀█▄▄█░░░░█
+        █░░░░█░░░░░░░░░▄▄███████▀█▄██████░░░░█
+        █░░░░█░░░░░░░░░████▀▀▄▄███████▀▀░░░░░█
+        █░░░░█░░░░░░░░░▀▀▄▄███████▀▀░░░░░░░░░█
+        █░░░░█░░░░░░░░░███████▀▀░░░░░░░░░░░░░█
+        █░░░░░▀▄▄▄░░░░░███▀▀░░░░░░░░░░░░░░░░░█
+        █░░░░░░░░░▀▀▀▀▀▀░░░░░░░░░░░░░░░░░░░░░█
+        █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
+    """
+    'description': 'Is it a lie?'
 # ------------------------------------------------------------------------------
 # ---------------------------------------------------------------- DTML END ----
 # ------------------------------------------------------------------------------
