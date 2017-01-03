@@ -460,36 +460,36 @@
     'prefix': 'dt'
   'Div':
     'prefix': 'div'
-# ------------------------------------------------------------------------------
-# ---- DTML START --------------------------------------------------------------
-# ------------------------------------------------------------------------------
-  '<dtml-call>':
-    'prefix': 'dtml-call'
-  '<dtml-comment> inline':
-    'prefix': 'dtml-comin'
-  '<dtml-comment>':
-    'prefix': 'dtml-com'
-  '<dtml-elif>':
-    'prefix': 'dtml-elif'
-  '<dtml-else>':
-    'prefix': 'dtml-else'
-  '<dtml-if><dtml-else>':
-    'prefix': 'dtml-if else'
-  '<dtml-if>':
-    'prefix': 'dtml-if'
-  '<dtml-in>':
-    'prefix': 'dtml-in'
-  '<dtml-let>':
-    'prefix': 'dtml-let'
-  '<dtml-unless>':
-    'prefix': 'dtml-unless'
-  '<dtml-var>':
-    'prefix': 'dtml-var'
-  '<dtml-with>':
-    'prefix': 'dtml-with'
-# ------------------------------------------------------------------------------
-# ---------------------------------------------------------------- DTML END ----
-# ------------------------------------------------------------------------------
+# # ------------------------------------------------------------------------------
+# # ---- DTML START --------------------------------------------------------------
+# # ------------------------------------------------------------------------------
+#   '<dtml-call>':
+#     'prefix': 'dtml-call'
+#   '<dtml-comment> inline':
+#     'prefix': 'dtml-comin'
+#   '<dtml-comment>':
+#     'prefix': 'dtml-com'
+#   '<dtml-elif>':
+#     'prefix': 'dtml-elif'
+#   '<dtml-else>':
+#     'prefix': 'dtml-else'
+#   '<dtml-if><dtml-else>':
+#     'prefix': 'dtml-if else'
+#   '<dtml-if>':
+#     'prefix': 'dtml-if'
+#   '<dtml-in>':
+#     'prefix': 'dtml-in'
+#   '<dtml-let>':
+#     'prefix': 'dtml-let'
+#   '<dtml-unless>':
+#     'prefix': 'dtml-unless'
+#   '<dtml-var>':
+#     'prefix': 'dtml-var'
+#   '<dtml-with>':
+#     'prefix': 'dtml-with'
+# # ------------------------------------------------------------------------------
+# # ---------------------------------------------------------------- DTML END ----
+# # ------------------------------------------------------------------------------
   # E
   'Emphasis':
     'prefix': 'em'
@@ -980,6 +980,67 @@
   'count()':
     'prefix': 'count'
     'body': 'count()$1'
+# CMS-OBJEKT-ATTRIBUTE
+  'getLangFmtDate( Timestamp [, Sprache, Format])':
+    'prefix': 'getLangFmtDate'
+    'body': 'getLangFmtDate(${1:Timestamp})$2'
+    'description': 'Der angegebenen Sprache nach formatiertes Datum, im angegebenen Format. <- wtf?'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekt_attribute/datetime_date_time/getlangfmtdate_/index_ger.html'
+    'leftLabel': 'Objekt-Attribut >'
+  'filename()':
+    'prefix': 'filename'
+    'body': 'filename()$1'
+    'description': 'Dateiname der Datei (nur bei Dateien verfügbar).'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekt_attribute/file/filename_/index_ger.html'
+    'leftLabel': 'Objekt-Attribut >'
+  'getDataSizeStr()':
+    'prefix': 'prefix'
+    'body': 'getDataSizeStr()$1'
+    'description': 'Eine leserliche Ausgabe zur Dateigröße.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekt_attribute/file/getdatasizestr_/index_ger.html'
+    'leftLabel': 'Objekt-Attribut >'
+  'get_exif_info()':
+    'prefix': 'get_exif_info'
+    'body': 'get_exif_info()$1'
+    'description': 'Diverse EXIF Informationen zu einem Bild.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekt_attribute/image/get_exif_info_/index_ger.html'
+    'leftLabel': 'Objekt-Attribut >'
+  'get_height()':
+    'prefix': 'get_height'
+    'body': 'get_height()$1'
+    'description': 'Die Höhe eines Bild Attributes oder einer ZMSGraphic.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekt_attribute/image/get_height_/index_ger.html'
+    'leftLabel': 'Objekt-Attribut >'
+  'get_href()':
+    'prefix': 'get_href'
+    'body': 'get_href()$1'
+    'description': 'URL zu einer Datei (nur bei Dateien verfügbar).'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekt_attribute/image/get_href_/index_ger.html'
+    'leftLabel': 'Objekt-Attribut >'
+  'get_image()':
+    'prefix': 'get_image'
+    'body': 'get_image()$1'
+    'description': 'Das Bild vom Attribut "img" einer ZMSGraphic.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekt_attribute/image/get_image_/index_ger.html'
+    'leftLabel': 'Objekt-Attribut >'
+  'get_image_from_parent()':
+    'prefix': 'get_image_from_parent'
+    'body': 'get_image_from_parent()$1'
+    'description': 'Bilder auf Ordnern rekursiv einbinden'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekt_attribute/image/get_image_from_parent_/index_ger.html'
+    'leftLabel': 'Objekt-Attribut >'
+  'get_image_hires()':
+    'prefix': 'get_image_hires'
+    'body': 'get_image_hires()$1'
+    'description': 'Das Bild vom Attribut "imghires" einer ZMSGraphic.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekt_attribute/image/get_image_hires_/index_ger.html'
+    'leftLabel': 'Objekt-Attribut >'
+  'get_width()':
+    'prefix': 'get_width'
+    'body': 'get_width()$1'
+    'description': 'Die Breite eines Bild Attributes oder einer ZMSGraphic.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekt_attribute/image/get_width_/index_ger.html'
+    'leftLabel': 'Objekt-Attribut >'
 #insert after .DOT
   # '.get_property(\'\')':
   #   'prefix': '.getprop'
