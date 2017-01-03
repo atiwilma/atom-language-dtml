@@ -1,6 +1,6 @@
 {
   "name": "atom-language-dtml",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "Matthias Balota",
   "description": "DTML language support in Atom.",
   "engines": {
