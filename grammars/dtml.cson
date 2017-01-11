@@ -89,18 +89,24 @@
   }
   {
     'begin': '<dtml-comment>'
-    'captures':
+    'beginCaptures':
       '0':
         'name': 'punctuation.definition.comment.dtml'
     'end': '</dtml-comment>'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.comment.dtml'
     'name': 'comment.block.dtml'
     'patterns': [
-      {
-        'match': '(?!</dtml-comment>)-comment'
-        'name': 'invalid.illegal.bad-comments-or-CDATA.dtml'
-      }
+    #   {
+    #     'match': '(?=</dtml-comment>)'
+    #     'name': 'invalid.illegal.bad-comments-or-CDATA.dtml'
+    #   }
       {
         'include': '#embedded-code'
+      }
+      {
+        'include': '#comment'
       }
     ]
   }
@@ -173,7 +179,7 @@
     ]
   }
   {
-    'begin': '(?:^\\s+)?(<)((?i:script))\\b(?=[^>]*\\btype\\s*=\\s*[\'"]?text/(x-handlebars|(x-(handlebars-)?|ng-)?template|dtml)[\'"]?)(?![^>]*/>)'
+    'begin': '(?:^\\s+)?(<)((?i:script))\\b(?=[^>]*\\btype\\s*=\\s*[\'"]?text/(x-handlebars|(x-(handlebars-)?|ng-)?template|html)[\'"]?)(?![^>]*/>)'
     'beginCaptures':
       '1':
         'name': 'punctuation.definition.tag.dtml'
@@ -284,7 +290,15 @@
             'name': 'comment.block.js'
           }
           {
+            'include': 'text.dtml.basic'
+          }
+          {
             'include': 'source.js'
+            'patterns': [
+                {
+                  'include': 'text.dtml.basic'
+                }
+            ]
           }
         ]
       }
@@ -539,6 +553,21 @@
       {
         'include': '#unquoted-attribute'
       }
+    ]
+  'comment':
+    'begin': '<dtml-comment>'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.comment.dtml'
+    'end': '</dtml-comment>'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.comment.dtml'
+    'name': 'comment.block.dtml'
+    'patterns': [
+        {
+            'include': '#comment'
+        }
     ]
   'unquoted-attribute':
     'match': '(?<==)(?:[^\\s<>/\'"]|/(?!>))+'

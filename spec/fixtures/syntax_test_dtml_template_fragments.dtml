@@ -2,23 +2,51 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <!-- Ensure script tags used as html fragments are parsed as embedded html -->
+        <dtml-comment> Ensure script tags used as html fragments are parsed as embedded html
 
         <script type="text/html" id="myTemplate">
-        <!-- <- punctuation.definition.tag.html -->
-        <!-- ^ entity.name.tag.script.html -->
+        <dtml-comment> punctuation.definition.tag.html </dtml-comment>
             <ul>
-            <!-- <- text.embedded.html -->
+            <dtml-comment> text.embedded.html </dtml-comment>
                 <li>Item 1</li>
                 <li>Item 2</li>
                 <li>Item 3</li>
             </ul>
+
+
+        </script> </dtml-comment>
+
+        <script type="text/javascript">
+            function functionName() {
+                <dtml-var "variable" html_quote>
+            }
+
+            for (var i = 0; i < array.length; i++) {
+                array[i]
+
+                <dtml-var "variable" html_quote>
+            }
+
+            <dtml-var "variable" html_quote>
         </script>
+
+        <dtml-comment>
+            <dtml-comment>
+                <dtml-comment>
+                    bla
+                    <dtml-var test>
+                </dtml-comment>
+            </dtml-comment>
+        </dtml-comment>
+
+
+        test
+        <dtml-comment> test </dtml-comment>
 
         <dtml-var "this().get_property('tjklbb')" html_quote>
 
         <div class="<dtml-var "test" html_quote>">
-
+            test
         </div>
 
         <div class="<dtml-var variable html_quote">
