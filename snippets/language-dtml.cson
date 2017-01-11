@@ -1072,6 +1072,11 @@
     'body': '<dtml-comment>$1</dtml-comment>'
     'description': 'Genau wie <dtml-comment>, nur wird der Kommentar inline gestellt.'
     'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_comment'
+  '<dtml-var dump>':
+    'prefix': 'dtml-var-dump'
+    'body': '<dtml-var "${1:variable}" dump>$2'
+    'description': 'Gibt alle Infos der Variable zurück.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_var'
   '<dtml-elif>':
     'prefix': 'dtml-elif'
     'body': '<dtml-elif ${1:else_if_statement}>$2'
@@ -1140,6 +1145,11 @@
     'body': '<dtml-comment> $1 </dtml-comment>'
     'description': 'Genau wie <dtml-comment>, nur wird der Kommentar inline gestellt.'
     'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_comment'
+  '<dtml-var dump>':
+    'prefix': 'dtml-var-dump'
+    'body': '<dtml-var "${1:variable}" dump>$2'
+    'description': 'Gibt alle Infos der Variable zurück.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_var'
   '<dtml-elif>':
     'prefix': 'dtml-elif'
     'body': '<dtml-elif ${1:else_if_statement}>\n\t$2'
