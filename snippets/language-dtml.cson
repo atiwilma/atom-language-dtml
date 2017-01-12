@@ -463,30 +463,71 @@
 # # ------------------------------------------------------------------------------
 # # ---- DTML START --------------------------------------------------------------
 # # ------------------------------------------------------------------------------
-#   '<dtml-call>':
-#     'prefix': 'dtml-call'
-#   '<dtml-comment> inline':
-#     'prefix': 'dtml-comin'
-#   '<dtml-comment>':
-#     'prefix': 'dtml-com'
-#   '<dtml-elif>':
-#     'prefix': 'dtml-elif'
-#   '<dtml-else>':
-#     'prefix': 'dtml-else'
-#   '<dtml-if><dtml-else>':
-#     'prefix': 'dtml-if else'
-#   '<dtml-if>':
-#     'prefix': 'dtml-if'
-#   '<dtml-in>':
-#     'prefix': 'dtml-in'
-#   '<dtml-let>':
-#     'prefix': 'dtml-let'
-#   '<dtml-unless>':
-#     'prefix': 'dtml-unless'
-#   '<dtml-var>':
-#     'prefix': 'dtml-var'
-#   '<dtml-with>':
-#     'prefix': 'dtml-with'
+  '<dtml-call>':
+    'prefix': 'dtml-call'
+    'body': 'dtml-call $1>$2'
+    'description': 'Mehr Infos ->'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_call'
+  '<dtml-comment>':
+    'prefix': 'dtml-com'
+    'body': 'dtml-comment>\n\t$1\n</dtml-comment>'
+    'description': 'Alle Lines innerhalb dem Comment werden ignoriert. Man sollte statt dem normalen HTML Comment diesen verwenden.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_comment'
+  '<dtml-comment> inline':
+    'prefix': 'dtml-comin'
+    'body': 'dtml-comment> $1 </dtml-comment>'
+    'description': 'Genau wie <dtml-comment>, nur wird der Kommentar inline gestellt.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_comment'
+  '<dtml-var dump>':
+    'prefix': 'dtml-var-dump'
+    'body': 'dtml-var "${1:variable}" dump>$2'
+    'description': 'Gibt alle Infos der Variable zurück.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_var'
+  '<dtml-elif>':
+    'prefix': 'dtml-elif'
+    'body': 'dtml-elif ${1:else_if_statement}>\n\t$2'
+    'description': 'Ein Else-If Statement.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_elif'
+  '<dtml-else>':
+    'prefix': 'dtml-else'
+    'body': 'dtml-else>\n\t$1'
+    'description': 'Ein Else Statement.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_else'
+  '<dtml-if><dtml-else>':
+    'prefix': 'dtml-if else'
+    'body': 'dtml-if ${1:if_statement}>\n\t$2\n<dtml-else>\n\t$3\n</dtml-if>$4'
+    'description': 'Ein IF-Statement mit einem Else-Statement eingebunden.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_else'
+  '<dtml-if>':
+    'prefix': 'dtml-if'
+    'body': 'dtml-if ${1:if_statement}>\n\t$2\n</dtml-if>'
+    'description': 'Ein IF-Statement.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_if'
+  '<dtml-in>':
+    'prefix': 'dtml-in'
+    'body': 'dtml-in ${1:array}>\n\t$2\n</dtml-in>'
+    'description': 'Eine Schleife in DTML.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_in'
+  '<dtml-let>':
+    'prefix': 'dtml-let'
+    'body': 'dtml-let\n\t${1:variable}=${3:"${2:get_variable}"}>\n\n\t\t$4\n</dtml-let>'
+    'description': 'Erstellt einen Kontext in dem definierte Variablen gültig sind.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_let'
+  '<dtml-unless>':
+    'prefix': 'dtml-unless'
+    'body': 'dtml-unless ${1:if_not_statement}>\n\t$2\n</dtml-unless>'
+    'description': 'Ein IF-Not-Statement.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_unless'
+  '<dtml-var>':
+    'prefix': 'dtml-var'
+    'body': 'dtml-var "${1:variable}" ${2:html_quote}>$3'
+    'description': 'Gibt eine Variable zurück.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_var'
+  '<dtml-with>':
+    'prefix': 'dtml-with'
+    'body': 'dtml-with ${1:object}>\n\t$2\n</dtml-with>'
+    'description': 'Mit <dtml-with> wird der Kontext vom Code innerhalb auf das übergebene Objekt gesetzt.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_with'
 # # ------------------------------------------------------------------------------
 # # ---------------------------------------------------------------- DTML END ----
 # # ------------------------------------------------------------------------------
@@ -680,7 +721,7 @@
 '.text.dtml, .text.dtml .meta.scope.between-tag-pair, .text.dtml .stringtext':
   'this()':
     'prefix': 'this'
-    'body': 'this().$1'
+    'body': 'this()$1'
   'REQUEST[\'\']':
     'prefix': 'req'
     'body': 'REQUEST[\'$1\']'
@@ -922,6 +963,12 @@
     'body': 'get_text()$1'
     'description': 'Gibt den Text eines Textabschnittes zurück.'
     'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/get_text_/index_ger.html'
+    'leftLabel': 'Seitenelement >'
+  'get_uid()':
+    'prefix': 'get_uid'
+    'body': 'get_uid()$1'
+    'description': 'Gibt die UID des Objektes zurück.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/cms_objekte/seitenelement/get_uid_/index_ger.html'
     'leftLabel': 'Seitenelement >'
   'is_active()':
     'prefix': 'is_active'
