@@ -1,13 +1,7 @@
 'scopeName': 'text.dtml.basic'
 'fileTypes': [
-  'ejs'
-  'htm'
   'dtml'
-  'kit'
-  'sdtml'
-  'tmpl'
-  'tpl'
-  'xdtml'
+  'zpt'
 ]
 'firstLineMatch': '''(?xi)
   # Document type definition
