@@ -572,3 +572,9 @@
   'unquoted-attribute':
     'match': '(?<==)(?:[^\\s<>/\'"]|/(?!>))+'
     'name': 'string.unquoted.dtml'
+  'source.js':
+    'patterns': [
+        {
+            'include': 'text.dtml.basic'
+        }
+    ]

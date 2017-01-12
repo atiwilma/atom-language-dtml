@@ -4,7 +4,7 @@
   "author": "Matthias Balota",
   "description": "DTML language support in Atom.",
   "engines": {
-    "atom": "*",
+    "atom": ">=1.13.0",
     "node": "*"
   },
   "homepage": "http://atom.github.io/atom-language-dtml",
