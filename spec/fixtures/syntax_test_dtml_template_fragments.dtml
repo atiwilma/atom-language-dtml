@@ -30,6 +30,7 @@
             <dtml-var "variable" html_quote>
         </script>
 
+
         <dtml-comment>
             <dtml-comment>
                 <dtml-comment>
