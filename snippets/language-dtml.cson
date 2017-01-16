@@ -848,6 +848,79 @@
     'prefix': 'wbr'
     'body': 'wbr>'
 
+'.text.dtml .meta.tag .stringtext':
+# ---- INLINE DTML START -------------------------------------------------------
+# ---- Zwischen "" -------------------------------------------------------------
+# ------------------------------------------------------------------------------
+  '<dtml-call>':
+    'prefix': 'dtml-call'
+    'body': 'dtml-call $1>$2'
+    'description': 'Mehr Infos ->'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_call'
+  '<dtml-comment>':
+    'prefix': 'dtml-com'
+    'body': 'dtml-comment>$1</dtml-comment>'
+    'description': 'Alle Lines innerhalb dem Comment werden ignoriert. Man sollte statt dem normalen HTML Comment diesen verwenden.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_comment'
+  '<dtml-comment> inline':
+    'prefix': 'dtml-comin'
+    'body': 'dtml-comment>$1</dtml-comment>'
+    'description': 'Genau wie <dtml-comment>, nur wird der Kommentar inline gestellt.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_comment'
+  '<dtml-var dump>':
+    'prefix': 'dtml-var-dump'
+    'body': 'dtml-var "${1:variable}" dump>$2'
+    'description': 'Gibt alle Infos der Variable zurück.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_var'
+  '<dtml-elif>':
+    'prefix': 'dtml-elif'
+    'body': 'dtml-elif ${1:else_if_statement}>$2'
+    'description': 'Ein Else-If Statement.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_elif'
+  '<dtml-else>':
+    'prefix': 'dtml-else'
+    'body': 'dtml-else>$1'
+    'description': 'Ein Else Statement.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_else'
+  '<dtml-if><dtml-else>':
+    'prefix': 'dtml-if else'
+    'body': 'dtml-if ${1:if_statement}>$2<dtml-else>$3</dtml-if>$4'
+    'description': 'Ein IF-Statement mit einem Else-Statement eingebunden.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_else'
+  '<dtml-if>':
+    'prefix': 'dtml-if'
+    'body': 'dtml-if ${1:if_statement}>$2</dtml-if>'
+    'description': 'Ein IF-Statement.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_if'
+  '<dtml-in>':
+    'prefix': 'dtml-in'
+    'body': 'dtml-in ${1:array}>$2</dtml-in>'
+    'description': 'Eine Schleife in DTML.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_in'
+  '<dtml-let>':
+    'prefix': 'dtml-let'
+    'body': 'dtml-let ${1:variable}=${3:"${2:get_variable}"}>$4</dtml-let>'
+    'description': 'Erstellt einen Kontext in dem definierte Variablen gültig sind.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_let'
+  '<dtml-unless>':
+    'prefix': 'dtml-unless'
+    'body': 'dtml-unless ${1:if_not_statement}>$2</dtml-unless>'
+    'description': 'Ein IF-Not-Statement.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_unless'
+  '<dtml-var>':
+    'prefix': 'dtml-var'
+    'body': 'dtml-var "${1:variable}" ${2:html_quote}>$3'
+    'description': 'Gibt eine Variable zurück.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_var'
+  '<dtml-with>':
+    'prefix': 'dtml-with'
+    'body': 'dtml-with ${1:object}>$2</dtml-with>'
+    'description': 'Mit <dtml-with> wird der Kontext vom Code innerhalb auf das übergebene Objekt gesetzt.'
+    'descriptionMoreURL': 'http://intranet.atikon.at/content/inhalte/dtml_dokumentation/dtml_syntax/dtml_with'
+# ------------------------------------------------------------------------------
+# ---------------------------------------------------------------- DTML END ----
+# ------------------------------------------------------------------------------
+
 # ------------------------------------------------------------------------------
 # ---- ZWISCHEN "" -------------------------------------------------------------
 # ------------------------------------------------------------------------------
