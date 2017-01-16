@@ -404,6 +404,9 @@
         'match': '&'
         'name': 'invalid.illegal.bad-ampersand.dtml'
       }
+      {
+        'include': '#string-double-quoted'
+      }
     ]
   'python':
     'begin': '(?:^\\s*)<\\?python(?!.*\\?>)'
