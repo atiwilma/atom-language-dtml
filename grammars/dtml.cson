@@ -5,7 +5,7 @@
 ]
 'firstLineMatch': '''(?xi)
   # Document type definition
-  <(?:!DOCTYPE\\s*)?dtml
+  <(?:!DOCTYPE\\s*)?html
   |
   # Emacs modeline
   -\\*-(?:\\s*(?=[^:;\\s]+\\s*-\\*-)|(?:.*?[;\\s]|(?<=-\\*-))mode\\s*:\\s*)
